@@ -1,0 +1,94 @@
+.projects-container {
+    padding: 5rem 3rem; // Equivalent to py-20 (20 * 0.25rem)
+    width: 100%;
+    background-color: #04071D;
+
+    .projects-heading {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        span {
+            color: #a855f7; // Replace with your preferred purple shade
+        }
+    }
+
+    .proj-cards {
+        width: 100%;
+        margin-top: 3rem; // Equivalent to mt-12 (12 * 0.25rem)
+        display: grid;
+        gap: 2.5rem; // Equivalent to gap-10 (10 * 0.25rem)
+        grid-template-columns: minmax(250, 1fr);
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .proj-cards-button {
+            flex: 1;
+            color: black;
+            border: 1px solid #e5e7eb;
+
+            .button-con {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem; // Equivalent to gap-2 (2 * 0.25rem)
+                padding: 0.75rem; // p-3 equals 0.75rem
+                padding-top: 1.5rem; // py-6 equals 1.5rem
+                padding-bottom: 1.5rem;
+
+                @media (min-width: 768px) {
+                    padding: 1.25rem; // md:p-5 equals 1.25rem
+                }
+
+                @media (min-width: 1024px) {
+                    flex-direction: row; // lg:flex-row
+                    align-items: center; // lg:items-center
+                    padding: 2.5rem; // lg:p-10 equals 2.5rem
+                }
+
+                .button-img {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    padding: 2rem 0rem;
+                    object-fit: cover;
+
+                    @media (min-width: 768px) {
+                        width: 5rem; // md:w-20 equals 5rem
+                    }
+
+                    @media (min-width: 1024px) {
+                        width: 8rem; // lg:w-32 equals 8rem
+                    }
+                }
+
+                .button-info {
+                    @media (min-width: 1024px) {
+                        margin-left: 1.25rem; // lg:ms-5 equals 1.25rem (in LTR, ms = margin-left)
+                    }
+
+                    .button-info-title {
+                        padding: 1rem 0;
+                        text-align: left; // text-start
+                        font-size: 1.25rem; // text-xl equals 1.25rem
+                        font-weight: bold;
+
+                        @media (min-width: 768px) {
+                            font-size: 1.5rem; // md:text-2xl (adjust as needed)
+                        }
+                    }
+
+                    .button-info-desc {
+                        padding: 1rem 0;
+                        text-align: left; // text-start
+                        margin-top: 0.75rem; // mt-3 equals 0.75rem
+                        font-weight: 600; // font-semibold
+                        color: #e5e7eb; // Adjust to your desired text color
+                    }
+                }
+            }
+        }
+    }
+
+}

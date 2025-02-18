@@ -1,0 +1,72 @@
+.career-sec {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #04071D;
+
+    .heading {
+        font-size: 3rem;
+        line-height: 1rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+
+        .heading-span {
+            color: rgb(203 172 249);
+        }
+    }
+
+
+    .career-con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .certificates {
+            height: 50vh;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tools-con {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            @media (min-width: 768px) {
+                gap: 4rem
+            }
+
+            @media (min-width: 1024px) {
+                margin-top: 2.5rem;
+            }
+
+            .img-con {
+                display: flex;
+                gap: 0.5rem;
+                max-width: 8rem;
+
+                @media (min-width: 768px) {
+                    max-width: 15rem;
+                }
+
+                .img {
+                    width: 1.75rem;
+
+                    @media (min-width: 768px) {
+                        width: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+}

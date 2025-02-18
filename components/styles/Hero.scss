@@ -1,0 +1,131 @@
+.container {
+    padding-bottom: 5rem;
+    padding-top: 9rem;
+}
+
+.spotlights {
+    position: relative;
+}
+
+.spotlight-1 {
+    position: absolute;
+    top: -10rem; // -40
+    left: -2.5rem; // -10
+    height: 100vh;
+}
+
+.spotlight-2 {
+    position: absolute;
+    top: 2.5rem; // 10
+    left: 100%; // left-full
+    height: 80vh;
+    width: 50vw;
+}
+
+.spotlight-3 {
+    position: absolute;
+    left: 20rem; // left-80
+    top: 7rem; // top-28
+    height: 80vh;
+    width: 50vw;
+}
+
+@media (min-width: 768px) {
+    .spotlight-1 {
+        left: -8rem; // md:-left-32
+        top: -5rem; // md:-top-20
+    }
+}
+
+.grid-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    background: rgba(0, 0, 0, 0.2); // Adjust this based on your specific design
+    mask-image: radial-gradient(ellipse at center, transparent 20%, black);
+
+    .grid-overlay {
+        position: absolute;
+        pointer-events: none;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black; // Match the background color
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 5rem;
+    z-index: 10;
+
+
+    .inner-content {
+        max-width: 89vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            max-width: 768px; // md:max-w-2xl equivalent
+        }
+
+        @media (min-width: 1024px) {
+            max-width: 60vw; // lg:max-w-[60vw] equivalent
+        }
+    }
+
+    .first-text {
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        text-align: center;
+        color: rgb(228 236 255);
+        max-width: 20rem;
+    }
+
+    .TextGenerateEffect {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            font-size: 3rem; // md:text-5xl equivalent
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3.75rem; // lg:text-6xl equivalent
+        }
+    }
+
+    .second-text {
+        text-align: center;
+        letter-spacing: 0.05rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+
+        @media (min-width: 768px) {
+            letter-spacing: 0.15em; // md:tracking-wider equivalent
+        }
+
+        @media (min-width: 768px) {
+            font-size: 1.125rem; // md:text-lg equivalent
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 1.5rem; // lg:text-2xl equivalent
+        }
+    }
+}

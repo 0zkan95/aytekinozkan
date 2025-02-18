@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "vercel --prod"
+    "lint": "next lint"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
@@ -31,8 +30,7 @@
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.163.0",
-    "three-globe": "^2.31.0",
-    "vercel": "^34.0.0"
+    "three-globe": "^2.31.0"
   },
   "devDependencies": {
     "@types/node": "^20",

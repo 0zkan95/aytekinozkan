@@ -11,10 +11,10 @@ interface PageProps {
 
 
 
-export default function DynamicPage({ params } : PageProps) {
+export default function DynamicPage({ params }: PageProps) {
     const item = certificates.find((item) => item.id.toString() === params.id);
 
-    if (!item ) {
+    if (!item) {
         return <div>Certificate not found!</div>
     }
 
@@ -22,7 +22,7 @@ export default function DynamicPage({ params } : PageProps) {
     return (
         <Layout>
             <h1>{item.name}</h1>
-            <Image src={item.img} alt={item.name} width={780} height={460} />
+            <Image src={item.img} alt={item.name} priority width={780} height={460} />
         </Layout>
     )
 }

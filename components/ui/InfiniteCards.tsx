@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import '../styles/InfiniteCards.scss';
 import React, { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export const InfiniteMovingCards = ({
     items,
@@ -81,7 +82,7 @@ export const InfiniteMovingCards = ({
                                     <span className="name">{item.name}</span>
                                 </div>
                                 <div className="img-con">
-                                    <img src={item.img} alt={item.name} />
+                                    <Image src={item.img} alt={item.name} width={700} height={460} priority />
                                 </div>
                                 
                             </div>

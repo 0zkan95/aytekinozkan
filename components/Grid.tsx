@@ -11,7 +11,6 @@ import gridsvg from '../public/grid.svg';
 import fourth1 from '../public/b4.svg';
 import fifth from '../public/b5.svg';
 import fGlobe from '../public/flexy-globe.jpg';
-import { Karla, Inter } from 'next/font/google';
 
 
 

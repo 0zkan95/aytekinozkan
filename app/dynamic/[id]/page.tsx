@@ -1,4 +1,6 @@
 
+
+"use client"
 import Layout from '@/components/Layout';
 import { certificates } from '@/data';
 import Image from 'next/image';

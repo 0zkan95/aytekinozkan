@@ -108,57 +108,57 @@ export const navItems = [
     {
       id: 1,
       name: "Introduction to Front End Development",
-      img: "/certificates/Intro-FrontEnd.png",
+      img: "./certificates/Intro-FrontEnd.png",
     },
     {
       id: 2,
       name: "Programming with JavaScript",
-      img: "/certificates/JavaScript.png",
+      img: "./certificates/JavaScript.png",
     },
     {
       id: 3,
       name: "HTML and CSS in Depth",
-      img: "/certificates/HtmlCssDepth.png",
+      img: "./certificates/HtmlCssDepth.png",
     },
     {
       id: 4,
       name: "Version Control",
-      img: "/certificates/VersionControl.png",
+      img: "./certificates/VersionControl.png",
     },
     {
       id: 5,
       name: "React Basics",
-      img: "/certificates/ReactBasics.png",
+      img: "./certificates/ReactBasics.png",
     },
     {
       id: 6,
       name: "Advanced React",
-      img: "/certificates/AdvancedReact.png",
+      img: "./certificates/AdvancedReact.png",
     },
     {
       id: 7,
       name: "Principles of UX/UI Design",
-      img: "/certificates/UX-UI.png",
+      img: "./certificates/UX-UI.png",
     },
     {
       id: 8,
       name: "Front End Developer Capstone",
-      img: "/certificates/FrontEndCapstone.png",
+      img: "./certificates/FrontEndCapstone.png",
     },
     {
       id: 9,
       name: "Coding Interview Preparation",
-      img: "/certificates/CodingInterview.png",
+      img: "./certificates/CodingInterview.png",
     },
     {
       id: 10,
       name: "Next.JS",
-      img: "/certificates/Nextjs.png",
+      img: "./certificates/Nextjs.png",
     },
     {
       id: 11,
       name: "Meta Front End Development Course",
-      img: "/certificates/MetaFrontEndFull.png",
+      img: "./certificates/MetaFrontEndFull.png",
     },
   ];
   

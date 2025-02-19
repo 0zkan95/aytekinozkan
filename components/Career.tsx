@@ -1,7 +1,6 @@
 "use client";
 import '@/components/styles/Career.scss';
 import React from "react";
-
 import { certificates, tools } from "@/data";
 import { InfiniteMovingCards } from './ui/InfiniteCards';
 

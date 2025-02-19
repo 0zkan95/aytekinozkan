@@ -148,17 +148,17 @@ export const navItems = [
     {
       id: 9,
       name: "Coding Interview Preparation",
-      img: "./certificates/CodingInterview.png",
+      img: "https://aytekinozkan.onrender.com/certificates/CodingInterview.png",
     },
     {
       id: 10,
       name: "Next.JS",
-      img: "./certificates/Nextjs.png",
+      img: "https://aytekinozkan.onrender.com/certificates/Nextjs.png",
     },
     {
       id: 11,
       name: "Meta Front End Development Course",
-      img: "./certificates/MetaFrontEndFull.png",
+      img: "https://aytekinozkan.onrender.com/certificates/MetaFrontEndFull.png",
     },
   ];
   

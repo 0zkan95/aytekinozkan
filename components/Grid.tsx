@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import './styles/Grid.scss';
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import animationData from "@/data/confetti.json";
 import MagicButton from './MagicButton';
 import { IoCopyOutline } from "react-icons/io5";
@@ -25,14 +25,7 @@ const Grid = () => {
   const leftLists = ["ReactJS", "Next.JS", "Typescript"];
   const rightLists = ["HTML", "CSS", "JavaScript"];
 
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  
 
   return (
     <section id="about">
@@ -129,7 +122,15 @@ const Grid = () => {
           <div className='bg-animation'>
 
             <div className='lottie-div'>
-              <Lottie options={defaultOptions} height={200} width={400} />
+              <Lottie 
+                loop= {copied}
+                autoplay= {copied}
+                animationData={animationData}
+                style={{
+                  height: 200,
+                  width: 400
+                }}   
+              />
             </div>
             <h3>Do you want to start a project together? </h3>
 

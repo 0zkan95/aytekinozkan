@@ -64,13 +64,14 @@
                 }
 
                 .button-info {
+                    
                     @media (min-width: 1024px) {
                         margin-left: 1.25rem; // lg:ms-5 equals 1.25rem (in LTR, ms = margin-left)
                     }
 
-                    .button-info-title {
+                    #button-info-title {
+                       
                         padding: 1rem 0;
-                        text-align: left; // text-start
                         font-size: 1.25rem; // text-xl equals 1.25rem
                         font-weight: bold;
 

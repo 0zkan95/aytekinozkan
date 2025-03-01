@@ -4,7 +4,7 @@ import React from 'react'
 import { projects } from '@/data';
 import { Button } from "./ui/MovingBorder";
 import Image from 'next/image';
-import '../components/styles/Projects.scss';
+import '@/components/styles/Projects.scss';
 
 
 const Projects = () => {
@@ -37,7 +37,7 @@ const Projects = () => {
                                 height={200}
                             />
                             <div className='button-info'>
-                                <h1 className='button-info-title'>
+                                <h1 id='button-info-title'>
                                     {card.title}
                                 </h1>
                                 <p className='button-info-desc'>
@@ -53,4 +53,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Projects;

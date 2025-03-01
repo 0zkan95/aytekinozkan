@@ -26,7 +26,6 @@ export default function DynamicPage({ params }: PageProps) {
                 width={780} 
                 height={460} 
             />
-            <img src="/certificates/UX-UI.png" alt="aynisi" width={780} height={460} />
         </>
     )
 }

@@ -108,43 +108,43 @@ export const certificates = [
   {
     id: 1,
     name: "HTML and CSS in Depth",
-    img: "/certificates/HtmlCssDepth.png",
+    img: "/HtmlCssDepth.png",
   },
   {
     id: 2,
     name: "Programming with JavaScript",
-    img: "/certificates/JavaScript.png",
+    img: "/JavaScript.png",
   },
 
   {
     id: 3,
     name: "Version Control",
-    img: "/certificates/VersionControl.png",
+    img: "/VersionControl.png",
   },
   {
     id: 4,
     name: "Advanced React",
-    img: "/certificates/AdvancedReact.png",
+    img: "/AdvancedReact.png",
   },
   {
     id: 5,
     name: "Principles of UX/UI Design",
-    img: "/certificates/UX-UI.png",
+    img: "/UX-UI.png",
   },
   {
     id: 6,
     name: "Coding Interview Preparation",
-    img: "/certificates/CodingInterview.png",
+    img: "/CodingInterview.png",
   },
   {
     id: 7,
     name: "Next.JS",
-    img: "/certificates/Nextjs.png",
+    img: "/Nextjs.png",
   },
   {
     id: 8,
     name: "Meta Front End Development Course",
-    img: "/certificates/MetaFrontEndFull.png",
+    img: "/MetaFrontEndFull.png",
   },
 ];
 

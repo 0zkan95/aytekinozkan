@@ -1,6 +1,8 @@
 .container {
     padding-bottom: 5rem;
     padding-top: 9rem;
+    background: rgb(4, 7, 29);
+    background-color: linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgba(12, 14, 35, 1) 100%);
 }
 
 .spotlights {
@@ -9,23 +11,23 @@
 
 .spotlight-1 {
     position: absolute;
-    top: -10rem; // -40
-    left: -2.5rem; // -10
+    top: -30rem; 
+    left: -4rem; 
     height: 100vh;
 }
 
 .spotlight-2 {
     position: absolute;
-    top: 2.5rem; // 10
-    left: 100%; // left-full
+    top: 2.5rem; 
+    left: 35%; 
     height: 80vh;
     width: 50vw;
 }
 
 .spotlight-3 {
     position: absolute;
-    left: 20rem; // left-80
-    top: 7rem; // top-28
+    left: 20rem; 
+    top: 7rem; 
     height: 80vh;
     width: 50vw;
 }
@@ -126,6 +128,32 @@
 
         @media (min-width: 1024px) {
             font-size: 1.5rem; // lg:text-2xl equivalent
+        }
+    }
+
+    .social-medias{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        @media (min-width: 768px) {
+            gap: 0.75rem;
+        }
+
+        .social-item{
+            width: 2.5rem;
+            height: 2.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(16px);
+            opacity: 0.75;
+            background-color: rgba(17,25,40,0.75);
+            border-radius: 10px;
+            border: 1px;
+            border-color: rgba(255,255,255,0.123);
         }
     }
 }

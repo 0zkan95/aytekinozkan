@@ -9,7 +9,7 @@ const Career = () => {
     return (
         <section id="career" className="career-sec">
             <h1 className="heading">
-                A Journey For
+                My Journey to
                 <span className="heading-span"> Front End Development </span>
             </h1>
 

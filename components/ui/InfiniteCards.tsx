@@ -10,7 +10,7 @@ import Image from 'next/image';
 export const InfiniteMovingCards = ({
     items,
     direction = "left",
-    speed = "fast",
+    speed = "slow",
     pauseOnHover = true,
 }: {
     items: {
@@ -75,18 +75,27 @@ export const InfiniteMovingCards = ({
         <div ref={containerRef} className="scroller">
             <ul ref={scrollerRef}>
                 {items.map((item, idx) => (
-                    <Link href={`/dynamic/${item.id}`} className="scroller-item" key={idx}>
-                        
-                            <div className="certi-con">
+                    <Link 
+                        href={`/dynamic/${item.id}`} 
+                        className="scroller-item" 
+                        key={idx}
+                    >
+
+                        <div className="certi-con">
                             <div className="name-div">
-                                    <span className="name">{item.name}</span>
-                                </div>
-                                <div className="img-con">
-                                    <Image src={item.img} alt={item.name} width={700} height={460} priority />
-                                </div>
-                                
+                                <span className="name">{item.name}</span>
                             </div>
-                        
+                            <div className="img-con">
+                                <Image 
+                                    src={item.img} 
+                                    alt={item.name} 
+                                    width={500} 
+                                    height={260} 
+                                    priority 
+                                />
+                            </div>
+                        </div>
+
                     </Link>
                 ))}
             </ul>

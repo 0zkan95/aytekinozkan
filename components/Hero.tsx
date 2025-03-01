@@ -6,6 +6,7 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './MagicButton';
 import { FaLocationArrow } from "react-icons/fa6";
 import Link from 'next/link';
+import { socialMedia } from "@/data";
 
 
 const Hero = () => {
@@ -18,7 +19,7 @@ const Hero = () => {
             </div>
 
             <div className="grid-container">
-                
+
                 <div className="grid-overlay" />
 
             </div>
@@ -38,13 +39,30 @@ const Hero = () => {
                         Hi! I&apos;m Aytekin, a Juniur Front-End Developer based in Turkey.
                     </p>
 
-                    <Link href="#about">
+                    <Link href="#projects">
                         <MagicButton
                             title="Show my work"
                             icon={<FaLocationArrow />}
                             position="right"
                         />
                     </Link>
+
+                    <div className="social-medias">
+                        {socialMedia.map((info) => (
+                            <div
+                                key={info.id}
+                                className="social-item"
+                            >
+                                <a href={info.link}>
+                                    <img
+                                        src={info.img}
+                                        alt="icons"
+                                        width={20}
+                                        height={20} />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 

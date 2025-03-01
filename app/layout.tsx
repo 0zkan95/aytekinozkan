@@ -1,15 +1,17 @@
 
+import { Metadata } from "next";
 
-import type { Metadata } from "next";
-import "./globals.scss";
 
 
 export const metadata: Metadata = {
   title: "Aytekin Özkan",
   description: "Portfolio, projects and experiments by Aytekin Özkan",
+  icons: {
+    icon: "/icon1.png",
+  },
 };
 
-export default function RootLayout({
+export default function Rootlayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

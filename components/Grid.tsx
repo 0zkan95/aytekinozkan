@@ -36,6 +36,7 @@ const Grid = () => {
               id='first-img'
               src={first}
               alt='img'
+              priority
             />
           </div>
           <div className='content'>
@@ -48,6 +49,7 @@ const Grid = () => {
             <Image
               src={fGlobe}
               alt='flexy globe'
+              priority
             />
           </div>
           <div className='content'>
@@ -56,7 +58,7 @@ const Grid = () => {
 
         </div>
         <div className='cell third-cell'>
-          <div className='content'>
+          <div className='third-content'>
             <p>I constantly try to <br />improve</p>
 
             <h3>My tech stack </h3>

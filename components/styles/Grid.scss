@@ -1,7 +1,6 @@
 .bento-grid-con {
     display: grid;
     gap: 16px;
-    width: 100%;
     padding: 2rem; // Mobile padding
     background: rgb(4, 7, 29);
     background-color: linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgba(12, 14, 35, 1) 100%);
@@ -9,7 +8,9 @@
     // Default: Mobile (1 column)
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(250px, auto);
-  
+    overflow-x: hidden;
+
+
     // Tablet and up
     @media (min-width: 768px) {
       padding: 3rem;
@@ -18,7 +19,7 @@
   
     // Desktop and up
     @media (min-width: 1024px) {
-      padding: 5rem;
+      padding: 5rem 2rem;
       grid-template-columns: repeat(3, 1fr);
     }
   
@@ -128,27 +129,27 @@
       grid-row: span 1;
       display: flex;
       flex-direction: row;
-      gap: 0.25rem;
-      width: fit-content;
-      position: relative;
+      gap: 0.5rem;
   
-      .content {
+      .third-content {
+        width: 50%;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        
   
         h3 {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
         }
       }
   
       .list-con {
         display: flex;
         flex-direction: row;
+        width: 50%;
+        padding: 1rem;
         gap: 0.75rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        height: fit-content;
   
         .left-list-con {
           display: flex;
@@ -156,7 +157,7 @@
           gap: 1rem;
   
           #left-span1 {
-            padding: 0.5rem;
+            padding: 1rem;
             font-size: 1rem;
             line-height: 1rem;
             opacity: 1;
@@ -166,7 +167,7 @@
           }
   
           #left-span2 {
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
             background-color: #10132e;
@@ -179,14 +180,14 @@
           gap: 1rem;
   
           #right-span1 {
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 8px;
             text-align: center;
             background-color: #10132e;
           }
   
           #right-span2 {
-            padding: 0.5rem;
+            padding: 1rem;
             text-align: center;
             opacity: 1;
             border-radius: 8px;

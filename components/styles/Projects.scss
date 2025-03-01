@@ -1,7 +1,7 @@
 .projects-container {
-    padding: 5rem 3rem; // Equivalent to py-20 (20 * 0.25rem)
-    width: 100%;
+    padding: 5rem 1rem; 
     background-color: #04071D;
+    overflow-x: hidden;
 
     .projects-heading {
         font-size: 2rem;
@@ -17,7 +17,7 @@
         width: 100%;
         margin-top: 3rem; // Equivalent to mt-12 (12 * 0.25rem)
         display: grid;
-        gap: 2.5rem; // Equivalent to gap-10 (10 * 0.25rem)
+        gap: 2rem; // Equivalent to gap-10 (10 * 0.25rem)
         grid-template-columns: minmax(250, 1fr);
 
         @media (min-width: 1024px) {

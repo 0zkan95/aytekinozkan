@@ -92,7 +92,7 @@ export const projects = [
     des: "Brainwave - Modern UI/UX website, developed using React.js and Tailwind CSS, exemplifies modern UI/UX principles.",
     img: "/Brain.png",
     iconLists: ["/re.svg", "/tail.svg", "/c.svg"],
-    link: "https://github.com/0zkan95/BrainwaveAI",
+    link: "https://brainwave-ai-tan-theta.vercel.app/",
   },
   {
     id: 4,

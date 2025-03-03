@@ -19,23 +19,24 @@
 .spotlight-2 {
     position: absolute;
     top: 2.5rem; 
-    left: 35%; 
+    left: 30%; 
     height: 80vh;
     width: 50vw;
 }
 
 .spotlight-3 {
     position: absolute;
-    left: 20rem; 
+    left: 10rem; 
     top: 7rem; 
     height: 80vh;
     width: 50vw;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .spotlight-1 {
         left: -8rem; // md:-left-32
-        top: -5rem; // md:-top-20
+        top: -4rem; // md:-top-20
+        height: 50vh;
     }
 }
 

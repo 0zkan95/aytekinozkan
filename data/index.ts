@@ -84,7 +84,7 @@ export const projects = [
     des: "The website that you can book a table and you can order",
     img: "/Home.png",
     iconLists: ["/re.svg", "/css.svg", "/html.svg"],
-    link: "https://github.com/0zkan95/LittleLemonRestaurant",
+    link: "https://little-lemon-restaurant-sand.vercel.app/",
   },
   {
     id: 3,

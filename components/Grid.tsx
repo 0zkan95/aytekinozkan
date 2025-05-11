@@ -10,8 +10,8 @@ import first from '../public/b1.svg';
 import gridsvg from '../public/grid.svg';
 import fourth1 from '../public/b4.svg';
 import fifth from '../public/b5.svg';
-import fGlobe from '../public/flexy-globe.jpg';
-
+import fGlobe from '../public/flexy-globe.jpg'; // Restore static image import
+// import InteractiveGlobe from './ui/InteractiveGlobe'; // Remove globe component import
 
 
 const Grid = () => {
@@ -35,7 +35,7 @@ const Grid = () => {
             <Image
               id='first-img'
               src={first}
-              alt='img'
+              alt="" // Decorative
               priority
             />
           </div>
@@ -64,22 +64,22 @@ const Grid = () => {
             <h3>My tech stack </h3>
           </div>
           <div className='list-con'>
-            <div className='left-list-con'>
+            <ul className='left-list-con'> {/* Changed div to ul */}
               {leftLists.map((item, i) => (
-                <span key={i} id='left-span1'>
+                <li key={i} className='tech-item'> {/* Changed span to li, id to className */}
                   {item}
-                </span>
+                </li>
               ))}
-              <span id='left-span2'></span>
-            </div>
-            <div className='right-list-con'>
-              <span id='right-span1'></span>
+              <li className='tech-item-placeholder'></li> {/* Changed span to li, id to className */}
+            </ul>
+            <ul className='right-list-con'> {/* Changed div to ul */}
+              <li className='tech-item-placeholder'></li> {/* Changed span to li, id to className */}
               {rightLists.map((item, i) => (
-                <span key={i} id='right-span2'>
+                <li key={i} className='tech-item'> {/* Changed span to li, id to className */}
                   {item}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
         </div>
@@ -90,13 +90,13 @@ const Grid = () => {
           <Image
             id='fourth-grid'
             src={gridsvg}
-            alt='img'
+            alt="" // Decorative
             fill
           />
           <Image
             id='fourth-img'
             src={fourth1}
-            alt='img'
+            alt="" // Decorative
           />
         </div>
 
@@ -109,12 +109,12 @@ const Grid = () => {
           <Image
             id='fifth-img'
             src={fifth}
-            alt='img'
+            alt="" // Decorative
           />
           <Image
             id='fifth-grid'
             src={gridsvg}
-            alt='img'
+            alt="" // Decorative
             fill
           />
 

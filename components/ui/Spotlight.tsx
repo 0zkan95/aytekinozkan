@@ -1,7 +1,7 @@
-
 "use client"
 import React from "react";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils"; // cn is no longer used directly here
+import "./../styles/Spotlight.scss"; // Adjusted path
 
 type SpotlightProps = {
   className?: string;
@@ -11,10 +11,7 @@ type SpotlightProps = {
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
   return (
     <svg
-      className={cn(
-        "animate-spotlight pointer-events-none absolute z-[1]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
-        className
-      )}
+      className={`spotlight-base ${className || ''}`.trim()}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
       fill="none"
@@ -27,8 +24,8 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           ry="273.501"
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
           fill={fill || "white"}
-          fillOpacity="0.21"
-        ></ellipse>
+          fillOpacity="0.4"
+        />
       </g>
       <defs>
         <filter

@@ -4,12 +4,24 @@ import './styles/Hero.scss';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './MagicButton';
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow, FaGithub, FaSquareXTwitter, FaLinkedinIn } from "react-icons/fa6"; // Added social icons
 import Link from 'next/link';
 import { socialMedia } from "@/data";
 
 
 const Hero = () => {
+    const renderSocialIcon = (id: number) => {
+        switch (id) {
+            case 1: // GitHub
+                return <FaGithub size="1.25rem" />; // 20px
+            case 2: // Twitter/X
+                return <FaSquareXTwitter size="1.25rem" />;
+            case 3: // LinkedIn
+                return <FaLinkedinIn size="1.25rem" />;
+            default:
+                return null;
+        }
+    };
     return (
         <div className='container'>
             <div className='spotlights'>
@@ -35,9 +47,10 @@ const Hero = () => {
                         className="TextGenerateEffect"
                     />
 
-                    <p className="second-text">
-                        Hi! I&apos;m Aytekin, a Juniur Front-End Developer based in Turkey.
-                    </p>
+                    <TextGenerateEffect
+                        words="Hi! I'm Aytekin, a Junior Front-End Developer based in Turkey."
+                        className="second-text"
+                    />
 
                     <Link href="#projects">
                         <MagicButton
@@ -47,22 +60,15 @@ const Hero = () => {
                         />
                     </Link>
 
-                    <div className="social-medias">
+                    <ul className="social-medias"> {/* Changed div to ul */}
                         {socialMedia.map((info) => (
-                            <div
-                                key={info.id}
-                                className="social-item"
-                            >
-                                <a href={info.link}>
-                                    <img
-                                        src={info.img}
-                                        alt="icons"
-                                        width={20}
-                                        height={20} />
+                            <li key={info.id} className="social-item"> {/* Changed div to li */}
+                                <a href={info.link} aria-label={`Social media link ${info.id}`}>
+                                    {renderSocialIcon(info.id)}
                                 </a>
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
 

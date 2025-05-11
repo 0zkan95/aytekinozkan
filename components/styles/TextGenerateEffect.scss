@@ -1,0 +1,27 @@
+.text-generate-effect-root {
+  font-weight: bold;
+}
+
+.text-generate-effect-words-container {
+  margin-top: 1rem; // mt-4
+}
+
+.text-generate-effect-words-wrapper {
+  color: #E4ECFF; // Default to light text color for dark theme
+  // font-size, line-height, and letter-spacing removed to allow inheritance
+  // from parent (.TextGenerateEffect or .second-text classes in Hero.scss)
+  white-space: pre-wrap; // Preserve spaces between words
+
+  /* html.dark block removed as theme is now always dark */
+}
+
+.text-generate-effect-word {
+  opacity: 0;
+  background: linear-gradient(90deg, #d8b4fe, #a78bfa, #7c3aed); // Purple gradient
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  // text-fill-color: transparent; // Removed unprefixed version
+  display: inline-block; // Often needed for background-clip: text on spans
+  padding-bottom: 0.1em; // Small padding if descenders get clipped
+}

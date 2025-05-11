@@ -16,6 +16,7 @@ const Career = () => {
             <div className="career-con">
                 <div className="certificates">
                     <InfiniteMovingCards 
+                        key={certificates.length} // Added key prop
                         items={certificates}
                         direction='right'
                         speed='slow'

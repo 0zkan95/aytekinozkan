@@ -1,7 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils"; // cn is no longer used directly here
+import "./../styles/TextGenerateEffect.scss"; // Adjusted path
 
 export const TextGenerateEffect = ({
   words,
@@ -37,7 +38,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="dark:text-white text-black opacity-0"
+              className="text-generate-effect-word" // Replaced Tailwind classes
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -51,9 +52,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
-      <div className="mt-4">
-        <div className=" dark:text-white text-black text-2xl leading-snug tracking-wide">
+    <div className={`text-generate-effect-root ${className || ''}`.trim()}>
+      <div className="text-generate-effect-words-container"> {/* Replaced mt-4 */}
+        <div className="text-generate-effect-words-wrapper"> {/* Replaced Tailwind classes */}
           {renderWords()}
         </div>
       </div>

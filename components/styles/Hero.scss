@@ -1,19 +1,26 @@
 .container {
     padding-bottom: 5rem;
     padding-top: 9rem;
-    background: rgb(4, 7, 29);
-    background-color: linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgba(12, 14, 35, 1) 100%);
+    background: linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgba(12, 14, 35, 1) 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .spotlights {
-    position: relative;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .spotlight-1 {
     position: absolute;
-    top: -30rem; 
-    left: -4rem; 
-    height: 100vh;
+    top: 20%;
+    right: 40%;
+    width: 120%;
+    height: 120%;
+    transform: rotate(-100deg);
 }
 
 .spotlight-2 {
@@ -26,17 +33,33 @@
 
 .spotlight-3 {
     position: absolute;
-    left: 10rem; 
-    top: 7rem; 
-    height: 80vh;
-    width: 50vw;
+    bottom: -40%;
+    left: 15%;
+    width: 120%;
+    height: 120%;
+    transform: rotate(-30deg);
 }
 
 @media (max-width: 768px) {
     .spotlight-1 {
-        left: -8rem; // md:-left-32
-        top: -4rem; // md:-top-20
-        height: 50vh;
+        top: -20%;
+        left: -15%;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .spotlight-2 {
+        top: 30%;
+        right: -15%;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .spotlight-3 {
+        bottom: -30%;
+        left: 20%;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -96,44 +119,37 @@
         text-align: center;
         color: rgb(228 236 255);
         max-width: 20rem;
+        font-weight: 500; // Added font-weight
+        padding-bottom: 0.3rem; // Add some space for the underline
+        border-bottom: 3px solid #a78bfa; // Thick underline with a purple color
+        display: inline-block; // To make border-bottom only span the text width if max-width is not met
     }
 
     .TextGenerateEffect {
         text-align: center;
-        font-size: 40px;
+        font-size: 3rem; // Set to 3rem as requested
         font-weight: 700;
-
-        @media (min-width: 768px) {
-            font-size: 3rem; // md:text-5xl equivalent
-        }
-
-        @media (min-width: 1024px) {
-            font-size: 3.75rem; // lg:text-6xl equivalent
-        }
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        // Gradient properties removed, will be applied to child spans directly
+        // Responsive font sizes removed for a fixed size
     }
 
     .second-text {
         text-align: center;
         letter-spacing: 0.05rem;
         margin-bottom: 1rem;
-        font-size: 1rem;
-        line-height: 1.2rem;
+        font-size: 2rem; // Set to 2rem as requested
+        line-height: 2.8rem; // Adjusted for 2rem font size (2 * 1.4)
+        font-weight: 500; // Added font-weight
+        // Responsive font sizes removed for a fixed size
+    } /* Closes .second-text */
+    /* The extra closing brace that was here has been removed */
 
-        @media (min-width: 768px) {
-            letter-spacing: 0.15em; // md:tracking-wider equivalent
-        }
-
-        @media (min-width: 768px) {
-            font-size: 1.125rem; // md:text-lg equivalent
-        }
-
-        @media (min-width: 1024px) {
-            font-size: 1.5rem; // lg:text-2xl equivalent
-        }
-    }
-
-    .social-medias{
-        margin-top: 2rem;
+    .social-medias {
+        list-style-type: none; /* Reset list style */
+        padding: 0;            /* Reset padding */
+        margin: 0;             /* Reset margin */
+        margin-top: 2rem;      /* Re-apply original margin-top */
         display: flex;
         align-items: center;
         gap: 1.5rem;
@@ -153,8 +169,7 @@
             opacity: 0.75;
             background-color: rgba(17,25,40,0.75);
             border-radius: 10px;
-            border: 1px;
-            border-color: rgba(255,255,255,0.123);
+            border: 1px solid rgba(255,255,255,0.123);
         }
     }
 }

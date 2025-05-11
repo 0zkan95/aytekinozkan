@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import '../styles/FloatingNavbar.scss';
+// import ThemeToggleButton from "./ThemeToggleButton"; // Removed import
 
 export const FloatingNav = ({
     navItems,
@@ -38,7 +39,7 @@ export const FloatingNav = ({
 
     return (
         <AnimatePresence mode="wait">
-            <motion.div
+            <motion.ul // Corrected: comment removed from here
                 initial={{
                     opacity: 1,
                     y: -100,
@@ -50,19 +51,21 @@ export const FloatingNav = ({
                 transition={{
                     duration: 0.2
                 }}
-                className={`motion-div ${className || ''}`}
+                className={`motion-div ${className || ''}`} // This class will now apply to ul
             >
                 {navItems.map((item, idx: number) => (
-                    <Link
-                        key={`link=${idx}`}
-                        href={item.link}
-                        className="link"
-                    >
-                        <span className="icon">{item.icon}</span>
-                        <span className="name">{item.name}</span>
-                    </Link>
+                    <li key={`nav-item-${idx}`} className="nav-item"> {/* Added li wrapper */}
+                        <Link
+                            href={item.link}
+                            className="link"
+                        >
+                            <span className="icon">{item.icon}</span>
+                            <span className="name">{item.name}</span>
+                        </Link>
+                    </li>
                 ))}
-            </motion.div>
+                {/* <ThemeToggleButton /> Removed the toggle button instance */}
+            </motion.ul>
         </AnimatePresence>
     );
 };

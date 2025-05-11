@@ -7,7 +7,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
+import { useRef } from "react"; // No change to imports needed for this
 import '../styles/MovingBorder.scss';
 
 
@@ -40,10 +40,10 @@ export function Button({
     >
       <div
         className="moving-button__border-container"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }} // Inner container for path
       >
-        <MovingBorder duration={duration} rx="30%" ry="30%">
-          <div className="moving-button__border" />
+        <MovingBorder duration={duration} rx={borderRadius} ry={borderRadius}> {/* Use borderRadius for rx/ry */}
+          <div className={`moving-button__border ${borderClassName || ''}`.trim()} /> {/* Apply borderClassName */}
         </MovingBorder>
       </div>
 
@@ -89,7 +89,35 @@ export const MovingBorder = ({
     (val) => pathRef.current?.getPointAtLength(val).y
   );
 
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
+  // Create a motion value for the angle
+  const angle = useMotionValue(0);
+
+  // Update useAnimationFrame to calculate and set the angle
+  useAnimationFrame((time) => {
+    const length = pathRef.current?.getTotalLength();
+    if (length) {
+      const currentProgress = (time * (length / duration)) % length;
+      progress.set(currentProgress); // Update progress for x and y
+
+      // Calculate angle
+      const p1 = pathRef.current.getPointAtLength(currentProgress);
+      // Get a point slightly ahead to determine tangent, handle path end
+      const delta = 0.1; // Small delta for tangent calculation
+      let p2Val = currentProgress + delta;
+      if (p2Val > length) { 
+        // If at the end, use a point before to get the tangent of the last segment
+        // This keeps the angle consistent with the segment it's on
+        p2Val = currentProgress - delta; 
+        const p2 = pathRef.current.getPointAtLength(Math.max(0, p2Val));
+        angle.set(Math.atan2(p1.y - p2.y, p1.x - p2.x)); // Angle from p2 to p1
+      } else {
+        const p2 = pathRef.current.getPointAtLength(p2Val);
+        angle.set(Math.atan2(p2.y - p1.y, p2.x - p1.x)); // Angle from p1 to p2
+      }
+    }
+  });
+
+  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%) rotate(${angle}rad)`;
 
   return (
     <>

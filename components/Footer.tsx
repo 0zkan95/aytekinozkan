@@ -1,18 +1,33 @@
 "use client"
-import { FaLocationArrow } from "react-icons/fa6";
+// FaLocationArrow will be replaced by SiGmail
+import { FaGithub, FaSquareXTwitter, FaLinkedinIn } from "react-icons/fa6"; 
+import { SiGmail } from "react-icons/si"; // Import SiGmail
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import '/components/styles/Footer.scss';
+import '@/components/styles/Footer.scss';
 
 
 const Footer = () => {
+    const renderSocialIcon = (id: number) => { // Added same helper function
+        switch (id) {
+            case 1: // GitHub
+                return <FaGithub size="1.25rem" />; // 20px
+            case 2: // Twitter/X
+                return <FaSquareXTwitter size="1.25rem" />;
+            case 3: // LinkedIn
+                return <FaLinkedinIn size="1.25rem" />;
+            default:
+                return null;
+        }
+    };
+
     return (
         <footer className="footer-container" id="contact">
 
             <div className="img-div">
                 <img
                     src="/footer-grid.svg"
-                    alt="grid"
+                    alt="" // Decorative
                     className="grid-img "
                 />
             </div>
@@ -29,8 +44,8 @@ const Footer = () => {
                 <a href="mailto:aytekin7ozkan@gmail.com">
                     <MagicButton
                         title="Let's get in touch"
-                        icon={<FaLocationArrow />}
-                        position="right"
+                        icon={<SiGmail />} // Changed icon to SiGmail
+                        position="right"    // Keeping position as "right"
                     />
                 </a>
             </div>
@@ -45,12 +60,8 @@ const Footer = () => {
                             key={info.id}
                             className="social-item"
                         >
-                            <a href={info.link}>
-                                <img 
-                                    src={info.img} 
-                                    alt="icons" 
-                                    width={20} 
-                                    height={20} />
+                            <a href={info.link} aria-label={`Social media link ${info.id}`}> {/* Added aria-label */}
+                                {renderSocialIcon(info.id)}
                             </a>
                         </div>
                     ))}

@@ -33,8 +33,13 @@
                 max-width: 45vw;
             }
 
-            span {
-                color: rgb(203 172 249);
+            span { // For "your digital presence"
+                background: linear-gradient(90deg, #d8b4fe, #a78bfa, #7c3aed); 
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                // text-fill-color: transparent; // Unprefixed version removed
+                display: inline; 
             }
         }
 
@@ -71,6 +76,9 @@
         }
 
         .social-medias{
+            list-style-type: none; /* Reset list style */
+            padding: 0;            /* Reset padding */
+            margin: 0;             /* Reset margin */
             display: flex;
             align-items: center;
             gap: 1.5rem;
@@ -90,8 +98,7 @@
                 opacity: 0.75;
                 background-color: rgba(17,25,40,0.75);
                 border-radius: 10px;
-                border: 1px;
-                border-color: rgba(255,255,255,0.123);
+                border: 1px solid rgba(255,255,255,0.123);
             }
         }
     }

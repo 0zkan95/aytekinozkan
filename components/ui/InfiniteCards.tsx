@@ -76,7 +76,7 @@ export const InfiniteMovingCards = ({
             <ul ref={scrollerRef}>
                 {items.map((item, idx) => (
                     <Link 
-                        href={`/dynamic/${item.id}`} 
+                        href={`/career/${item.id}`} 
                         className="scroller-item" 
                         key={idx}
                     >

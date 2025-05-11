@@ -9,9 +9,15 @@
         font-weight: 700;
         text-align: center;
         margin-bottom: 3rem;
+        // color for "My Journey to" will be inherited or browser default (likely white/light on dark bg)
 
-        .heading-span {
-            color: rgb(203 172 249);
+        .heading-span { // For "Front End Development"
+            background: linear-gradient(90deg, #d8b4fe, #a78bfa, #7c3aed); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            // text-fill-color: transparent; // Unprefixed version removed to avoid warnings
+            display: inline; // Ensures the gradient applies correctly to the text flow
         }
     }
 

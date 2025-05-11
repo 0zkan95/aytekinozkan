@@ -1,0 +1,100 @@
+.project-display-card {
+  background-color: #0a0f2c; // Slightly lighter than main dark bg for contrast
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%; // Make cards in a row equal height if grid allows
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card-image-wrapper {
+    width: 100%;
+    height: 200px; // Fixed height for image container
+    overflow: hidden;
+    position: relative; // For potential image effects or overlays
+
+    .project-card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Ensure image covers the area
+    }
+  }
+
+  .project-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; // Allow content to take remaining space
+    color: #E4ECFF; // Light text
+  }
+
+  .project-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #FFFFFF; // Brighter white for title
+  }
+
+  .project-card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1; // Allow description to take available space
+  }
+
+  .project-card-tech-stack {
+    margin-bottom: 1rem;
+    .tech-stack-label {
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #a78bfa; // Accent color
+      margin-bottom: 0.5rem;
+    }
+    .tech-icons-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .tech-icon {
+        width: 24px; // Size for tech icons
+        height: 24px;
+      }
+    }
+  }
+
+  .project-card-links {
+    margin-top: auto; // Push links to the bottom of the card
+    padding-top: 1rem; // Space above links
+    border-top: 1px solid #1e293b; // Separator line
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #a78bfa; // Accent color for links
+      font-weight: 500;
+      padding: 0.25rem 0;
+
+      &:hover {
+        color: #d8b4fe; // Lighter purple on hover
+        text-decoration: underline;
+      }
+
+      svg { // Style for react-icons used in links
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}

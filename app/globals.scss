@@ -19,13 +19,6 @@ h1, h2, h3, h4, h5, h6 {
   // line-height: 1.2;
 }
 
-.main-page {
-  /* Styles for the main page wrapper, if any */
-  /* For example, ensuring it takes full height: */
-  // min-height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-}
 
 .main-container {
   /* Styles for the primary content container */
@@ -35,8 +28,3 @@ h1, h2, h3, h4, h5, h6 {
   // margin: 0 auto;
   width: 100%; // Ensure it can span full width if sections inside handle their own padding/max-width
 }
-
-/* You can add more global styles, CSS variables, or resets here */
-
-/* Light theme styles removed as ThemeProvider is no longer used */
-/* Individual components might need their own html.light overrides if they have hardcoded dark backgrounds */

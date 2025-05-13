@@ -33,15 +33,15 @@ const Footer = () => {
             </div>
 
             <div className="message-content">
-                <h1 className="heading">
+                <h1 className="heading" data-aos="fade-down">
                     Ready to take <span>your digital
                         presence </span> to the next level?
                 </h1>
-                <p className="content-text">
-                    Reach out to me today and let&apos;s discuss how I can help you
+                <p className="content-text" data-aos="fade-right" data-aos-delay="200">
+                    Reach out to me today and let's discuss how I can help you
                     achieve your goals.
                 </p>
-                <a href="mailto:aytekin7ozkan@gmail.com">
+                <a href="mailto:aytekin7ozkan@gmail.com" data-aos="fade-left" data-aos-delay="400">
                     <MagicButton
                         title="Let's get in touch"
                         icon={<SiGmail />} // Changed icon to SiGmail
@@ -50,11 +50,11 @@ const Footer = () => {
                 </a>
             </div>
             <div className="copyright-con">
-                <p className="copy-text">
+                <p className="copy-text" data-aos="fade-up" data-aos-delay="600">
                     Copyright © 2025 Aytekin Özkan
                 </p>
 
-                <div className="social-medias">
+                <div className="social-medias" data-aos="fade-up" data-aos-delay="700">
                     {socialMedia.map((info) => (
                         <div
                             key={info.id}

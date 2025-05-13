@@ -5,10 +5,21 @@ import { projects } from '@/data';
 import ProjectDetailDisplay from '@/components/ui/ProjectDetailDisplay'; // Import the new detail display component
 import Link from 'next/link'; 
 import { IoHome } from 'react-icons/io5';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './projects.scss'; 
 
 const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(projects.length > 0 ? projects[0] : null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: 'ease-out-cubic',
+      mirror: true,
+    });
+  }, []);
 
   // Handle case where projects might be empty initially or id doesn't match
   useEffect(() => {
@@ -33,7 +44,11 @@ const ProjectsPage = () => {
 
   return (
     <main className="projects-page-container">
-      <div className="projects-page-header">
+      <div 
+        className="projects-page-header"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
         <Link href="/" className="home-link-projects-page" aria-label="Go to homepage">
           <IoHome size={28} />
         </Link>
@@ -43,7 +58,12 @@ const ProjectsPage = () => {
       </div>
 
       <div className="projects-layout-wrapper"> 
-        <aside className="projects-sidebar">
+        <aside 
+          className="projects-sidebar"
+          data-aos="slide-right"
+          data-aos-duration="1200"
+          data-aos-easing="ease-out-cubic"
+        >
           <ul>
             {projects.map((project) => (
               <li 
@@ -56,7 +76,12 @@ const ProjectsPage = () => {
             ))}
           </ul>
         </aside>
-        <section className="project-detail-content-area">
+        <section 
+          className="project-detail-content-area"
+          data-aos="slide-left"
+          data-aos-duration="1200"
+          data-aos-easing="ease-out-cubic"
+        >
           {selectedProject ? (
             <ProjectDetailDisplay project={selectedProject} />
           ) : (

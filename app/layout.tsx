@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Poppins, Inter } from 'next/font/google'; // Import fonts
 import "./globals.scss";
+import AOSInitializer from "@/components/ui/AOSInitializer";
 
 // Configure Poppins for headings
 const poppins = Poppins({
@@ -33,7 +34,10 @@ export default function Rootlayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}> {/* Apply font variables */}
-      <body>{children}</body>
+      <body>
+        <AOSInitializer />
+        {children}
+      </body>
     </html>
   );
 }

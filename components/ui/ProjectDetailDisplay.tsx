@@ -38,10 +38,12 @@ const ProjectDetailDisplay: React.FC<ProjectDetailDisplayProps> = ({ project }) 
 
   return (
     <div className="project-detail-display">
-      <h2 className="project-detail-title">{project.title}</h2>
+      <h2 className="project-detail-title">
+        {project.title}
+      </h2>
       
-      {currentBigImage && (
-        <div className="project-detail-big-image-wrapper">
+      <div className="project-detail-big-image-wrapper">
+        {currentBigImage && (
           <Image 
             src={currentBigImage} 
             alt={`Main view of ${project.title}`} 
@@ -51,8 +53,8 @@ const ProjectDetailDisplay: React.FC<ProjectDetailDisplayProps> = ({ project }) 
             style={{ objectFit: 'contain', borderRadius: '8px' }} 
             priority // Prioritize loading for the main image of the selected project
           />
-        </div>
-      )}
+        )}
+      </div>
 
       {project.images && project.images.length > 1 && (
         <div className="project-detail-thumbnails">
@@ -107,7 +109,9 @@ const ProjectDetailDisplay: React.FC<ProjectDetailDisplayProps> = ({ project }) 
         )}
       </div>
 
-      <p className="project-detail-description">{project.des}</p> {/* Description moved to the bottom */}
+      <p className="project-detail-description">
+        {project.des}
+      </p> {/* Description moved to the bottom */}
     </div>
   );
 };

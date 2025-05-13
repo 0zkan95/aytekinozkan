@@ -30,7 +30,10 @@ const Grid = () => {
   return (
     <section id="about">
       <div className="bento-grid-con">
-        <div className='cell first-cell'>
+        <div className='cell first-cell' 
+          data-aos="fade-up" 
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-bottom">
           <div className='img-div'>
             <Image
               id='first-img'
@@ -44,7 +47,10 @@ const Grid = () => {
           </div>
 
         </div>
-        <div className='cell second-cell'>
+        <div className='cell second-cell' 
+          data-aos="flip-left" 
+          data-aos-duration="1200"
+          data-aos-delay="200">
           <div className='img-div'>
             <Image
               src={fGlobe}
@@ -57,7 +63,10 @@ const Grid = () => {
           </div>
 
         </div>
-        <div className='cell third-cell'>
+        <div className='cell third-cell' 
+          data-aos="zoom-in" 
+          data-aos-duration="1500"
+          data-aos-delay="300">
           <div className='third-content'>
             <p>I constantly try to <br />improve</p>
 
@@ -83,7 +92,10 @@ const Grid = () => {
           </div>
 
         </div>
-        <div className='cell fourth-cell'>
+        <div className='cell fourth-cell' 
+          data-aos="fade-right" 
+          data-aos-duration="1000"
+          data-aos-delay="400">
           <div className='content'>
             <h3>Tech enthusiast with a passion for development. </h3>
           </div>
@@ -100,7 +112,10 @@ const Grid = () => {
           />
         </div>
 
-        <div className='cell fifth-cell'>
+        <div className='cell fifth-cell' 
+          data-aos="fade-left" 
+          data-aos-duration="1200"
+          data-aos-delay="500">
           <div className='content'>
             <p>The Inside Scoop</p>
             <h3>Currently building a JS Animation library</h3>
@@ -120,13 +135,16 @@ const Grid = () => {
 
 
         </div>
-        <div className='cell sixth-cell'>
+        <div className='cell sixth-cell' 
+          data-aos="zoom-out" 
+          data-aos-duration="1500"
+          data-aos-delay="600">
           <div className='bg-animation'>
 
             <div className='lottie-div'>
               <Lottie 
-                loop= {copied}
-                autoplay= {copied}
+                loop={copied}
+                autoplay={copied}
                 animationData={animationData}
                 style={{
                   height: 200,

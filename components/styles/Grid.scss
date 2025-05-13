@@ -1,25 +1,27 @@
 .bento-grid-con {
     display: grid;
     gap: 16px;
-    padding: 2rem; // Mobile padding
+    padding: 2rem;
     background: linear-gradient(90deg, rgba(4, 7, 29, 1) 0%, rgba(12, 14, 35, 1) 100%);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     
     // Default: Mobile (1 column)
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(250px, auto);
-    overflow-x: hidden;
-
+    overflow: hidden;
 
     // Tablet and up
     @media (min-width: 768px) {
-      padding: 3rem;
-      grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+        grid-template-columns: repeat(2, 1fr);
     }
   
     // Desktop and up
     @media (min-width: 1024px) {
-      padding: 5rem 2rem;
-      grid-template-columns: repeat(3, 1fr);
+        padding: 5rem 2rem;
+        grid-template-columns: repeat(3, 1fr);
     }
   
     .cell {

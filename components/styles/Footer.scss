@@ -2,13 +2,19 @@
     padding-top: 5rem;
     padding-bottom: 2.5rem;
     background-color: #04071D;
-    overflow-x: hidden;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 
     .img-div {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
-        
+        width: 100%;
+        height: 100%;
+        z-index: 1;
         
         img {
             position: absolute;
@@ -20,9 +26,12 @@
     }
 
     .message-content {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0 1rem;
 
         .heading {
             font-size: 3rem;
@@ -53,11 +62,14 @@
     }
 
     .copyright-con{
+        position: relative;
+        z-index: 2;
         display: flex;
         margin-top: 4rem;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        padding: 0 1rem;
 
         @media (min-width: 768px) {
             flex-direction: row;

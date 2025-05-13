@@ -38,29 +38,35 @@ const Hero = () => {
 
             <div className="content">
                 <div className="inner-content">
-                    <p className="first-text">
+                    <p className="first-text" data-aos="fade-down">
                         Dynamic Web Magic with Next.js
                     </p>
 
-                    <TextGenerateEffect
-                        words="Transforming Concepts into Seamless User Experiences"
-                        className="TextGenerateEffect"
-                    />
-
-                    <TextGenerateEffect
-                        words="Hi! I'm Aytekin, a Junior Front-End Developer based in Turkey."
-                        className="second-text"
-                    />
-
-                    <Link href="#projects">
-                        <MagicButton
-                            title="Show my work"
-                            icon={<FaLocationArrow />}
-                            position="right"
+                    <div data-aos="fade-right" data-aos-delay="200">
+                        <TextGenerateEffect
+                            words="Transforming Concepts into Seamless User Experiences"
+                            className="TextGenerateEffect"
                         />
-                    </Link>
+                    </div>
 
-                    <ul className="social-medias"> {/* Changed div to ul */}
+                    <div data-aos="fade-left" data-aos-delay="400">
+                        <TextGenerateEffect
+                            words="Hi! I'm Aytekin, a Junior Front-End Developer based in Turkey."
+                            className="second-text"
+                        />
+                    </div>
+
+                    <div data-aos="zoom-in" data-aos-delay="600">
+                        <Link href="#projects">
+                            <MagicButton
+                                title="Show my work"
+                                icon={<FaLocationArrow />}
+                                position="right"
+                            />
+                        </Link>
+                    </div>
+
+                    <ul className="social-medias" data-aos="fade-up" data-aos-delay="800"> {/* Changed div to ul */}
                         {socialMedia.map((info) => (
                             <li key={info.id} className="social-item"> {/* Changed div to li */}
                                 <a href={info.link} aria-label={`Social media link ${info.id}`}>

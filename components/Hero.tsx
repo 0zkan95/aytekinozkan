@@ -51,7 +51,7 @@ const Hero = () => {
 
                     <div data-aos="fade-left" data-aos-delay="400">
                         <TextGenerateEffect
-                            words="Hi! I'm Aytekin, a Junior Front-End Developer based in Turkey."
+                            words="Hi! I'm Aytekin, a Full Stack Developer based in Ankara,Turkey."
                             className="second-text"
                         />
                     </div>

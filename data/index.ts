@@ -175,6 +175,43 @@ This project showcases my ability to create professional, feature-rich websites 
   },
   {
     id: 4,
+    title: "EVOGYM",
+    images: ["/Evo1.png", "/Evo2.png", "/Evo3.png", "/Evo4.png"],
+    iconLists: ["/next.svg", "/ts.svg", "/react.svg", "/tailwindcss-logo.svg",],
+    githubLink: "https://github.com/0zkan95/gym",
+    visitLink: "https://evogym-one-sigma.vercel.app/",
+    des: `EVOGYM - A Dynamic Web Experience for Fitness Enthusiasts
+
+EVOGYM is a vibrant and modern website I developed for a contemporary fitness center. This platform is designed to be an engaging online destination, attracting potential members, providing essential information, and showcasing the gym's offerings through a sleek and intuitive interface, as highlighted by its various visual sections (Evo1.png - Evo4.png).
+
+Key Features & Functionality (Inferred from a typical gym website and multiple images):
+
+Visually Engaging Homepage & Sections: The site likely features a compelling landing page and distinct sections (as suggested by Evo1.png to Evo4.png) to showcase facilities, atmosphere, and unique selling propositions, immediately capturing visitor interest.
+
+Detailed Program & Class Information: Provides comprehensive details about available fitness classes, training programs, and potentially trainer profiles, helping users find services that match their fitness goals.
+
+Membership Options & Benefits Showcase: Clearly presents various membership tiers, pricing, and the benefits associated with joining EVOGYM, streamlining the decision-making process for prospective members.
+User-Centric Navigation & Information Access: Designed for ease of use, allowing visitors to effortlessly find information about schedules, location, contact details, and what the gym offers.
+
+Modern & Responsive Design: Ensures a seamless and visually appealing experience across all devices (desktops, tablets, and mobiles), reflecting the energetic and contemporary brand of EVOGYM.
+
+Technical Stack:
+
+This project was built using a powerful and modern JavaScript-centric stack:
+
+Next.js: Chosen for its exceptional server-side rendering (SSR) and static site generation (SSG) capabilities. This delivers blazing-fast load times, significantly improves SEO (making it easier for potential members to find EVOGYM online), and offers a smooth, app-like user experience.
+
+React: Leveraged to create a dynamic and component-based user interface. This allows for interactive elements, such as potential class schedules, image galleries, or testimonial sections, and ensures a modular and maintainable codebase.
+
+TypeScript: Implemented to add static typing to the JavaScript code. This enhances code quality, improves developer productivity by catching errors early, and makes the application more robust and scalable – essential for a professional online presence.
+
+Tailwind CSS: Employed for its utility-first approach to styling. This facilitated the rapid development of a custom, responsive, and visually polished design that embodies the energetic and modern aesthetic of a fitness brand like EVOGYM.
+
+This EVOGYM project showcases my ability to develop engaging, high-performance web applications tailored to businesses aiming for a strong online presence. It combines modern design principles with robust front-end technologies to create an effective digital storefront that drives user engagement and supports business objectives.
+`
+  },
+  {
+    id: 5,
     title: "Movie App",
     images: ["/Movie-1.png", "/Movie-2.png", "/Movie-3.png", "/Movie-4.png", "/Movie-5.png",],
     iconLists: ["/next.svg", "/tailwindcss-logo.svg", "/ts.svg", "/react.svg",],
@@ -211,7 +248,7 @@ TMDB API Integration: Successfully integrated The Movie Database API as the prim
 This project demonstrates my ability to build dynamic, API-driven web applications that offer extensive content discovery and a seamless user experience, utilizing modern front-end technologies to create an engaging platform for entertainment enthusiasts.`,
   },
   {
-    id: 5,
+    id: 6,
     title: "Brainwave",
     images: ["/Brain.png", "/Brain-1.png", "/Brain-2.png", "/Brain-3.png",],
     iconLists: ["/next.svg", "/react.svg", "/tailwindcss-logo.svg", "/c.svg", "/ts.svg", "/gsap.svg"],
@@ -222,7 +259,7 @@ This project demonstrates my ability to build dynamic, API-driven web applicatio
     This project demonstrates my ability to create a modern, responsive, and user-friendly website using React.js and Tailwind CSS, showcasing my skills in front-end development and design.`,
   },
   {
-    id: 6,
+    id: 7,
     title: "Quiz App",
     images: ["/quizApp.png"],
     iconLists: ["/react.svg", "/ts.svg", "/tailwindcss-logo.svg",],
@@ -239,7 +276,7 @@ Multiple Quiz Categories: Offers a variety of quiz categories, including general
 Interactive Quiz Interface: A user-friendly interface with a timer and progress bar, making the quiz experience more engaging and time-sensitive.`
   },
   {
-    id: 7,
+    id: 8,
     title: "The Little Lemon Restauran",
     images: ["/Home.png"], 
     iconLists: ["/react.svg", "/css_icon.svg", "/html_icon.svg", "javascript_icon.svg"],
